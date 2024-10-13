@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Speed Typing Game (by Rajat Jain)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typify</title>
+    <link rel="icon" type="image/png" href="logo/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="logo/logo.png" width="150px">
+    </div>
+    <div id="history">
+    </div>
+
+    <div class="content flex">
+        <h2>Type the Given Words Within <span>5 seconds</span></h2>
+        <p id="word">menu</p>
+        <input type="text" placeholder="Start typing to Start..." autofocus>
+
+        <dialog class="gameover_result">
+            <p id="gameover_display"></p>
+            <div class="a">
+                <p id="mode"></p>
+                <p id="gameover_score"></p>
+                <p id="wpm_msg"></p>
+                <p id="gameover_high"></p>
+            </div>
+            <button id="trybtn">Play again</button>
+            <p id="gameover_display2">🔥 NEW HIGH SCORE 🔥</p>
+        </dialog>
+
+        <button id="settingbtn">Difficulty & Theme Settings</button>
+
+        <dialog class="settings_dialog">
+            <div class="level">
+                <label>Choose Difficulty: </label>
+                <select>
+                    <option value="Easy Mode">Easy</option>
+                    <option value="Medium Mode">Medium</option>
+                    <option value="Hard Mode">Hard</option>
+                    <option value="Pro Mode">Pro</option>
+                </select>
+            </div>
+            <label>Choose Theme: </label>
+            <div class="themes">
+                <button class="themebtn" data-theme="0" data-bgcolor="#E6DAF8" data-color="#704D97" data-boxshadow="#140320" data-backdrop="hsla(267, 36%, 17%, 0.21)"></button>
+                <button class="themebtn" data-theme="1" data-bgcolor="#D8D7D7" data-color="#000000" data-boxshadow="#1f1c1c" data-backdrop="hsla(0, 4%, 9%, 0.21)"></button>
+                <button class="themebtn" data-theme="2" data-bgcolor="#F9D142" data-color="#292826" data-boxshadow="#1f1c1c" data-backdrop="hsla(0, 4%, 9%, 0.21)"></button>
+                <button class="themebtn" data-theme="3" data-bgcolor="#DCE2F0" data-color="#50586C" data-boxshadow="#1f1c1c" data-backdrop="hsla(0, 4%, 9%, 0.21)"></button>
+                <button class="themebtn" data-theme="4" data-bgcolor="#f8e4d5" data-color="#402e33" data-boxshadow="#4b2c2c" data-backdrop="hsla(0, 15%, 19%, 0.21)"></button>
+                <br><br>
+                <button class="themebtn" data-theme="5" data-bgcolor="#C4E6F3" data-color="#056b85" data-boxshadow="#043b3f" data-backdrop="hsla(192, 36%, 17%, 0.21)"></button>
+                <button class="themebtn" data-theme="6" data-bgcolor="#d6dbf1" data-color="#2A3580" data-boxshadow="#060e3b" data-backdrop="hsla(246, 36%, 17%, 0.21)"></button>
+                <button class="themebtn" data-theme="7" data-bgcolor="#00ff15" data-color="#000000" data-boxshadow="#095a06" data-backdrop="hsla(246, 36%, 17%, 0.21)"></button>
+                <button class="themebtn" data-theme="8" data-bgcolor="#FFFFFF" data-color="#cf5379" data-boxshadow="#4b0723" data-backdrop="hsla(308, 36%, 17%, 0.21)"></button>
+                <button class="themebtn" data-theme="9" data-bgcolor="#F3DE99" data-color="#775413" data-boxshadow="#16043f" data-backdrop="hsla(246, 36%, 17%, 0.21)"></button>
+            </div>
+            <button id="applybtn">Apply</button>
+
+        </dialog>
+
+        <div class="stats flex">
+            <p id="time">Time: 5 seconds</p>
+            <p id="score">Score: 0</p>
+            <p id="highscore">High Score: </p>
+        </div>
+
+        <p id="instruction">Instructions: Type each word or clause under 5 seconds to score (+1 for each correct).
+            Change level & themes
+            under "Difficulty & Theme Settings". To play again, just
+            click 'Play Again' in Game Over dialog</p>
+
+    </div>
+    <div class="branding flex">
+        <p>Follow on Github</p>
+        <a href="https://github.com/Rajat-XR" target="_blank"><img src="logo/github-logo.png" alt="" width="15px"></a>
+        <p>↗</p>
+    </div>
+</body>
+<script src="scripts/logic.js" type="module"></script>
+
+</html>

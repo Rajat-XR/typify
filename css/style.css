@@ -1,0 +1,305 @@
+@font-face {
+    font-family: SF-Pro-Bold;
+    src: url(../fonts/SF-Pro-Display-Bold.otf);
+}
+
+:root {
+    --bg-color: rgb(230, 218, 248);
+    --color: rgb(112, 77, 151);
+    --backdrop: hsla(267, 36%, 17%, 0.21);
+    --box-shadow: #140320;
+    --font-bold: SF-Pro-Bold;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--color);
+    font-family: var(--font-bold);
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+h2 {
+    margin-top: 1.3em;
+    margin-bottom: 1.2em;
+}
+
+input {
+    margin-top: 1.01em;
+    margin-bottom: 1.6em;
+}
+
+button {
+    padding: 1em 1.5em;
+    font-size: 15px;
+    border-radius: 10em;
+    border: none;
+    background-color: var(--color);
+    color: white;
+    cursor: pointer;
+}
+
+dialog {
+    background-color: white;
+    color: var(--color);
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 20px 100px var(--box-shadow);
+
+    &::backdrop {
+        background-color: var(--backdrop);
+        backdrop-filter: blur(0.6rem);
+    }
+}
+
+.logo {
+    display: inline;
+    position: absolute;
+    top: 0.8em;
+    left: 0.9em;
+}
+
+#settingbtn {
+    font-family: var(--font-bold);
+}
+
+.settings_dialog {
+    top: 0em;
+    height: 20rem;
+    width: 22.5rem;
+
+    label {
+        font-size: 1.3em;
+    }
+
+    select {
+        padding: 0.5em 1.5em;
+        margin-left: 3em;
+        border-radius: 10px;
+    }
+
+    .level {
+        margin-bottom: 1.5em;
+    }
+
+    .themes {
+        margin-top: 1em;
+        margin-bottom: 1.7em;
+
+        button {
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: -20px -20px;
+        }
+    }
+
+    #applybtn {
+        margin-left: 5.5em;
+        width: 50%;
+    }
+}
+
+.a {
+    width: 60%;
+    margin-left: 4.3em;
+    margin-top: 1.5em;
+    background: var(--color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    padding: 0.1em 1.2em;
+    font-size: 0.8em;
+}
+
+.gameover_result {
+    background: white;
+    color: var(--color);
+    border: none;
+    height: 30rem;
+    width: 42rem;
+    font-size: 2em;
+    padding-bottom: 2px;
+
+    #mode {
+        text-align: center;
+    }
+
+    #gameover_display {
+        text-align: center;
+        color: var(--color);
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 30px;
+        /* font-family: "Londrina Sketch", sans-serif; */
+    }
+
+    #trybtn {
+        background: var(--color);
+        color: var(--bg-color);
+        margin-top: 1.5em;
+        margin-left: 17em;
+        margin-bottom: 0.5em;
+        width: 20%;
+        font-family: var(--font-bold);
+    }
+
+    #gameover_display2 {
+        letter-spacing: 0.5em;
+        font-size: 0.55em;
+        display: none;
+        color: var(--color);
+        text-align: center;
+        margin-top: 0.5em;
+    }
+}
+
+button[data-theme="0"] {
+    background-image: url(../logo/theme1.png);
+}
+
+button[data-theme="1"] {
+    background-image: url(../logo/theme2.png);
+}
+
+button[data-theme="2"] {
+    background-image: url(../logo/theme3.png);
+}
+
+button[data-theme="3"] {
+    background-image: url(../logo/theme4.png);
+}
+
+button[data-theme="4"] {
+    background-image: url(../logo/theme5.png);
+}
+
+button[data-theme="5"] {
+    background-image: url(../logo/theme6.png);
+}
+
+button[data-theme="6"] {
+    background-image: url(../logo/theme7.png);
+}
+
+button[data-theme="7"] {
+    background-image: url(../logo/theme8.png);
+}
+
+button[data-theme="8"] {
+    background-image: url(../logo/theme9.png);
+}
+
+button[data-theme="9"] {
+    background-image: url(../logo/theme10.png);
+}
+
+#gamebtn {
+    display: none;
+}
+
+.content {
+    flex-direction: column;
+}
+
+.stats {
+    gap: 10rem;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.themebtn {
+    background-color: black;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: none;
+    transition: all 250ms ease-in-out;
+    font-family: var(--font-bold);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+input {
+    padding: 12px 10px;
+    width: 20rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 2px 15px 50px var(--color);
+}
+
+#word {
+    font-size: 3.2rem;
+    margin: 0;
+    color: var(--color);
+    font-weight: 800;
+    font-family: var(--font-bold);
+}
+
+#score {
+    transition: all 50ms ease-in-out;
+}
+
+#instruction {
+    width: 45%;
+    text-align: justify;
+    padding: 25px;
+    background: var(--color);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 2px 20px 80px var(--color);
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: black;
+    font-family: var(--font-bold);
+}
+
+#history {
+    display: none;
+    position: absolute;
+    top: 1em;
+    right: 0.5em;
+    color: var(--color);
+    padding: 10px;
+    z-index: 1;
+}
+
+.branding {
+    margin: 0;
+    position: fixed;
+    gap: 7px;
+    left: 0.5em;
+    bottom: 0.4em;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--color);
+    color: white;
+    border-radius: 10px;
+    padding: 0px 15px;
+}
+
+span {
+    color: black;
+    font-weight: 800;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--color);
+}
+
+#result {
+    font-size: 1.7rem;
+}
